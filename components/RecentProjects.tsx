@@ -8,10 +8,12 @@ import { PinContainer } from "./ui/Pin";
 const RecentProjects = () => {
   return (
     <div className="py-20" id="projects">
-      <h1 className="heading">
-        <span className="text-[#7743db]">{"<"}</span>
-        <span className="text-purple text-5xl">Recent projects </span>
-        <span className="text-[#7743db]">{"/>"}</span>
+      <h1 className="heading ">
+        <span className="text-[#7743db] text-3xl md:text-5xl">{"<"}</span>
+        <span className="text-purple md:text-5xl text-3xl">
+          Recent projects{" "}
+        </span>
+        <span className="text-[#7743db] text-3xl md:text-5xl">{"/>"}</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {projects.map((item) => (
