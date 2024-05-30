@@ -4,15 +4,15 @@ import { FaLocationArrow } from "react-icons/fa6";
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
+import Image from "next/image";
+import Link from "next/link";
 
 const RecentProjects = () => {
   return (
     <div className="py-20" id="projects">
       <h1 className="heading ">
         <span className="text-[#7743db] text-3xl md:text-5xl">{"<"}</span>
-        <span className="text-purple md:text-5xl text-3xl">
-          Recent projects{" "}
-        </span>
+        <span className="text-purple md:text-5xl text-3xl">Projects </span>
         <span className="text-[#7743db] text-3xl md:text-5xl">{"/>"}</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
@@ -22,20 +22,23 @@ const RecentProjects = () => {
             key={item.id}
           >
             <PinContainer
-              title="/ui.aceternity.com"
+              title={item.title}
               href="https://twitter.com/mannupaaji"
+              className=""
             >
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
                 >
-                  <img src="/bg.png" alt="bgimg" />
+                  <Image width={100} height={100} src="/bg.png" alt="bgimg" />
                 </div>
-                <img
+                <Image
                   src={item.img}
+                  width={1080}
+                  height={720}
                   alt="cover"
-                  className="z-10 absolute bottom-0"
+                  className="z-10 absolute bottom-0 object-cover "
                 />
               </div>
 
@@ -68,12 +71,16 @@ const RecentProjects = () => {
                   ))}
                 </div>
 
-                <div className="flex justify-center items-center">
+                <Link
+                  href={item.link}
+                  className="flex justify-center items-center"
+                >
                   <p className="flex lg:text-xl md:text-xs text-sm text-purple">
                     Check Live Site
                   </p>
+
                   <FaLocationArrow className="ms-3" color="#CBACF9" />
-                </div>
+                </Link>
               </div>
             </PinContainer>
           </div>
