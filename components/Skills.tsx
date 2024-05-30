@@ -6,47 +6,38 @@ import { cn } from "@/lib/utils";
 const reviews = [
   {
     name: "HTML",
-
     img: "/html.png",
   },
   {
     name: "CSS",
-
     img: "/css.png",
   },
   {
     name: "Tailwind CSS",
-
     img: "/tailwind.png",
   },
   {
     name: "Javascript",
-
     img: "/javascript.png",
   },
   {
     name: "ReactJS",
-
     img: "/React.png",
   },
   {
     name: "Nodejs",
-
     img: "/nodejs.png",
   },
   {
     name: "MongoDB",
-
     img: "/Mongodb.png",
   },
   {
     name: "MySQL",
-
     img: "/MySQL.png",
   },
   {
     name: "Postman",
-
     img: "/Postman.png",
   },
 ];
@@ -56,17 +47,7 @@ const firstRow = reviews.slice(0, thirdLength);
 const secondRow = reviews.slice(thirdLength, thirdLength * 2);
 const thirdRow = reviews.slice(thirdLength * 2);
 
-const ReviewCard = ({
-  img,
-  name,
-  username,
-  body,
-}: {
-  img: string;
-  name: string;
-  username: string;
-  body: string;
-}) => {
+const ReviewCard = ({ img, name }: { img: string; name: string }) => {
   return (
     <figure
       className={cn(
@@ -82,7 +63,6 @@ const ReviewCard = ({
           <figcaption className="text-lg font-medium  ">{name}</figcaption>
         </div>
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
     </figure>
   );
 };
@@ -98,18 +78,18 @@ const Skills = () => {
       <div className="flex flex-col items-center max-lg:mt-10">
         <div className="relative bg-[#000319] flex h-full w-screen md:w-[85vh] flex-col items-center justify-center overflow-hidden    py-20 ">
           <Marquee pauseOnHover className="[--duration:20s]">
-            {firstRow.map((review) => (
-              <ReviewCard key={review.username} {...review} />
+            {firstRow.map((review, index) => (
+              <ReviewCard key={index} {...review} />
             ))}
           </Marquee>
           <Marquee reverse pauseOnHover className="[--duration:20s]">
-            {secondRow.map((review) => (
-              <ReviewCard key={review.username} {...review} />
+            {secondRow.map((review, index) => (
+              <ReviewCard key={index} {...review} />
             ))}
           </Marquee>
           <Marquee pauseOnHover className="[--duration:20s]">
-            {thirdRow.map((review) => (
-              <ReviewCard key={review.username} {...review} />
+            {thirdRow.map((review, index) => (
+              <ReviewCard key={index} {...review} />
             ))}
           </Marquee>
           <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-[#000319]"></div>
