@@ -67,7 +67,7 @@ export const projects = [
     des: "I crafted my portfolio with Next.js, capitalizing on its speed and versatility. It presents my projects and skills elegantly, ensuring a smooth user experience.",
     img: "/portfolio.png",
     iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/ts.svg"],
-    link: "https://my-portfolio-65.vercel.app/",
+    link: "https://shrikant-portfolio-10.vercel.app/",
   },
   {
     id: 2,
