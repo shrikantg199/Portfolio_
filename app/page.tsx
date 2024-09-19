@@ -30,8 +30,8 @@ const Home = () => {
           ) : (
             <>
               <TracingBeam className="">
-                <Hero />
-                <Grid />
+                <Hero />   
+                <Grid /> 
                 <RecentProjects />
                 <Skills />
                 <Approach />

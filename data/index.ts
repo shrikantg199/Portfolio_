@@ -71,6 +71,30 @@ export const projects = [
   },
   {
     id: 2,
+    title: "Business Directory App",
+    des: "Developed a Business Directory app using EXPO framework utilizing Firebase for data management, allowing users to add businesses, leave reviews, and manage user data.",
+    img: "/business_directory.png",
+    iconLists: ["/firebase.png", "/re.svg"],
+    link: "https://github.com/shrikantg199/Business_directory_App.git",
+  },
+  {
+    id: 3,
+    title: "X App UI Design",
+    des: "Designed the complete UI of X app, providing a clean and user-friendly experience using React Native and Expo.",
+    img: "/x_app_ui.png",
+    iconLists: ["/re.svg"],
+    link: "https://github.com/shrikantg199/X-APP-clone-UI.git",
+  },
+  {
+    id: 4,
+    title: "Coffee Shop App",
+    des: "Created a Coffee Shop app with React Native Expo and Firebase integration, featuring an intuitive cart and ordering system.",
+    img: "/coffee_shop.png",
+    iconLists: ["/firebase.png", "/re.svg"],
+    link: "https://github.com/shrikantg199/Coffee_shop.git",
+  },
+  {
+    id: 5,
     title: "LeetCode Clone",
     des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
     img: "/Leetcode.png",
@@ -78,7 +102,7 @@ export const projects = [
     link: "/ui.yoom.com",
   },
   {
-    id: 3,
+    id: 6,
     title: "Food App",
     des: "Developed a dynamic food app with a user-friendly cart system. Users can effortlessly add and remove items, creating a seamless shopping experience. ",
     img: "/FoodApp.png",
@@ -87,7 +111,7 @@ export const projects = [
     link: "",
   },
   {
-    id: 4,
+    id: 7,
     title: "CryptoHub web App",
     des: "React.js and Tailwind-powered web app offering real-time cryptocurrency data, personalized watchlists, interactive charts, news aggregation, and secure user authentication.",
     img: "/CryptoHub.jpg",
