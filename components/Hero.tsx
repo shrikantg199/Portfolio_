@@ -62,7 +62,7 @@ const Hero = () => {
                 className="text-center text-xl font-mono md:text-2xl lg:text-3xl"
               />
               <p className="text-center font-serif md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-                Hi! I&apos;m Shrikant Gaikwad, NextJS | NodeJS | React-Js
+                Hi! I&apos;m Shrikant Gaikwad, React Native(EXPO) | NextJS | NodeJS | React-Js
                 Developer.
               </p>
               <hr className="md:w-[400px] w-60  p-2 my-2 justify-center h-4 z-10 items-center flex mx-auto" />{" "}
