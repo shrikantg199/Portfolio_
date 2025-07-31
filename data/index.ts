@@ -68,6 +68,7 @@ export const projects = [
     img: "/portfolio.png",
     iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/ts.svg"],
     link: "https://shrikant-portfolio-10.vercel.app/",
+    type: "website",
   },
   {
     id: 2,
@@ -76,6 +77,7 @@ export const projects = [
     img: "/business_directory.png",
     iconLists: ["/firebase.png", "/re.svg"],
     link: "https://github.com/shrikantg199/Business_directory_App.git",
+    type: "app",
   },
   {
     id: 3,
@@ -84,6 +86,7 @@ export const projects = [
     img: "/x_app_ui.png",
     iconLists: ["/re.svg"],
     link: "https://github.com/shrikantg199/X-APP-clone-UI.git",
+    type: "app",
   },
   {
     id: 4,
@@ -92,6 +95,7 @@ export const projects = [
     img: "/coffee_shop.png",
     iconLists: ["/firebase.png", "/re.svg"],
     link: "https://github.com/shrikantg199/Coffee_shop.git",
+    type: "app",
   },
   {
     id: 5,
@@ -100,6 +104,7 @@ export const projects = [
     img: "/Leetcode.png",
     iconLists: ["/re.svg", "/nodejs.png", "/tail.svg", "/Mongodb.png"],
     link: "/ui.yoom.com",
+    type: "website",
   },
   {
     id: 6,
@@ -109,6 +114,7 @@ export const projects = [
     iconLists: ["/re.svg", "/tail.svg"],
     // link: "https://food-app-indol-eta.vercel.app/",
     link: "",
+    type: "app",
   },
   {
     id: 7,
@@ -117,6 +123,7 @@ export const projects = [
     img: "/CryptoHub.jpg",
     iconLists: ["/re.svg", "/tail.svg"],
     link: "https://crypto-hub-psi.vercel.app/",
+    type: "website",
   },
 ];
 

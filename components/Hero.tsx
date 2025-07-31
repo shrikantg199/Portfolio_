@@ -11,7 +11,7 @@ import { RiTwitterXLine } from "react-icons/ri";
 import { FollowerPointerCard } from "./ui/following-pointer";
 const Hero = () => {
   return (
-    <div className="pb-20 pt-36">
+    <div className="pb-20 pt-36" id="home">
       <a href="#home">
         <div>
           <Spotlight
@@ -46,7 +46,7 @@ const Hero = () => {
             <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
               <motion.div
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 2 }}
+                animate={{ opacity: 1 }}
                 transition={{ duration: 3 }} // Adjust the duration as needed
               >
                 <Image
@@ -62,8 +62,8 @@ const Hero = () => {
                 className="text-center text-xl font-mono md:text-2xl lg:text-3xl"
               />
               <p className="text-center font-serif md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-                Hi! I&apos;m Shrikant Gaikwad, React Native(EXPO) | NextJS | NodeJS | React-Js
-                Developer.
+                Hi! I&apos;m Shrikant Gaikwad, React Native(EXPO) | NextJS |
+                NodeJS | React-Js Developer.
               </p>
               <hr className="md:w-[400px] w-60  p-2 my-2 justify-center h-4 z-10 items-center flex mx-auto" />{" "}
               <div className="flex gap-6 py-3 md:py-1  justify-center items-center">

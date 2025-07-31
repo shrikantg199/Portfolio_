@@ -242,7 +242,10 @@ const ShaderMaterial = ({
           };
           break;
         default:
-          console.error(`Invalid uniform type for '${uniformName}'.`);
+          // Silently handle invalid uniform types in production
+          if (process.env.NODE_ENV === "development") {
+            console.error(`Invalid uniform type for '${uniformName}'.`);
+          }
           break;
       }
     }

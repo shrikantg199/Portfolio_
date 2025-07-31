@@ -1,6 +1,7 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
+import { useState } from "react";
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
@@ -8,6 +9,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const RecentProjects = () => {
+  const [activeFilter, setActiveFilter] = useState("all");
+
+  const filteredProjects = projects.filter((project) => {
+    if (activeFilter === "all") return true;
+    return project.type === activeFilter;
+  });
+
   return (
     <div className="py-20" id="projects">
       <h1 className="heading ">
@@ -15,8 +23,43 @@ const RecentProjects = () => {
         <span className="text-purple md:text-5xl text-3xl">Projects </span>
         <span className="text-[#7743db] text-3xl md:text-5xl">{"/>"}</span>
       </h1>
+
+      {/* Filter Buttons */}
+      <div className="flex justify-center items-center gap-4 mt-8 mb-12">
+        <button
+          onClick={() => setActiveFilter("all")}
+          className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+            activeFilter === "all"
+              ? "bg-[#7743db] text-white shadow-lg shadow-purple/25"
+              : "bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20"
+          }`}
+        >
+          All Projects
+        </button>
+        <button
+          onClick={() => setActiveFilter("app")}
+          className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+            activeFilter === "app"
+              ? "bg-[#7743db] text-white shadow-lg shadow-purple/25"
+              : "bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20"
+          }`}
+        >
+          Apps
+        </button>
+        <button
+          onClick={() => setActiveFilter("website")}
+          className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+            activeFilter === "website"
+              ? "bg-[#7743db] text-white shadow-lg shadow-purple/25"
+              : "bg-white/10 text-gray-300 hover:bg-white/20 border border-white/20"
+          }`}
+        >
+          Websites
+        </button>
+      </div>
+
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-        {projects.map((item) => (
+        {filteredProjects.map((item) => (
           <div
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}

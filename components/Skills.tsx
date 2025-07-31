@@ -63,7 +63,7 @@ const ReviewCard = ({ img, name }: { img: string; name: string }) => {
           className="rounded-full"
           width={32}
           height={32}
-          alt=""
+          alt={`${name} skill icon`}
           src={img}
         />
         <div className="flex flex-col">
